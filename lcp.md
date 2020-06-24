@@ -69,6 +69,11 @@ This is the implementation in JAX:
 ```python
 import jax.numpy as np
 
+def lcp_forward(M, q):
+    # lcp solver
+    # ...
+    return z
+
 def lcp_jvp(primals, tangents):
     M, q = primals
     dM, dq = tangents
@@ -80,9 +85,24 @@ def lcp_jvp(primals, tangents):
 lcp_forward.defjvp(lcp_jvp)
 ```
 
-where `lcp_forward()` is the LCP solver function. You can read more on how to define custom JVP's or VJP's [here]().
+where `lcp_forward()` is the LCP solver function. The full implementation is available [here](...). You can read more on how to define custom JVP's or VJP's [here]().
 
-test
+It's always a good idea to test your mathematical derivation and implementation with some numerical tests. JAX offers some utility functions which make this fairly easy. In the code below, `check_vjp` will compare our VJP implementation with numerical gradients (numerical differences) for some random $M$ and $q$. If the two are not equal (up to a small numerical error) `check_vjp` throws an error.
+
+```python
+from jax.test_util import check_jvp
+
+n = 3
+key = random.PRNGKey(42)
+keys = random.split(key, 2)
+
+M = random.normal(keys[0], (n, n))
+q = random.normal(keys[1], (n,))
+
+check_jvp(lcp_forward, lcp_jvp, (M, q))
+```
+
+As you can see in my full implementation, my tests are a bit more elaborate. I also test the solution of the LCP solver, and do this `check_vjp` on 100 different random $M$'s and $q$'s.
 
 backward mode
 
