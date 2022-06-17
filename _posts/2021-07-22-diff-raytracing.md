@@ -11,6 +11,10 @@ tags:
     - research
 ---
 
+# todo
+ explain raytracing next to simple example
+ progress with this example to explain everything
+
 [JAX](https://github.com/google/jax) is the new kid on the blok in the machine learning community.
 It's fairly young but has quickly grown in popularity.
 JAX is the love child of [Autograd](https://github.com/HIPS/autograd) and TensorFlow's [XLA](https://www.tensorflow.org/xla), meaning it combines elegant autograd (`grad`), with fast just-in-time compiled code (`jit`) on CPU or GPU (or TPU). And all that in native python as a `numpy` drop-in replacement, making it very easy to get started.
@@ -25,10 +29,31 @@ Because you can model all kinds of rendering effects by letting the rays bounce 
 At the core of ray tracing lies an algorithm to find the intersection point of a ray with an object in the scene.
 One way to do that is using signed distance fields (SDF). For any point $x$ and any object in the scene, an SDF provides you with the signed distance (a positive value if $x$ is outside the object, a negative value if $x$ is inside the object).
 The raymarching algorithm iteratively marches along the ray with a distance equal to the signed distance field of the scene. That way, the ray will never pass through an object.
-You can read more about it in this other excellent [blog post](https://blog.evjang.com/2019/11/jaxpt.html).
+You can read more about it in this other excellent [blog post](https://blog.evjang.com/2019/11/jaxpt.html) or [resource](https://raytracing.github.io/).
 
 This blog focuses on implementing a more efficient differentiable raymarching algorithm using the implicit function theorem.
 By utilizing the implicit function theorem[^1], we can derive the gradient thourgh the raymarching algorithm without having to backprop through all the iterations.
+For the purposes of explaining these methods, we will use a simple 2D ray tracing task. Consider a ray starting at the focal point at (0, 0) and a 2D scene consisting of a circle with radius 2 and center at (3, 1).
+We can parameterize the ray by it's angle $\theta$, this allows us to define a simple function $f(\theta)$ that outputs the intersection point of the ray with the circle, by using the raymarching algorithm.
+
+We start by defining the signed distance function of a circle:
+
+```python
+import jax
+import jax.numpy as np
+
+
+def sdf(params, x):
+    center, radius = params
+    return np.linalg.norm(x - center) - radius
+```
+
+Function `sdf` will return the signed distance between the point `x` and the circle, parameterised by centerpoint `center` and `radius`. The distance is negative if the `x` is inside the circle.
+
+Next, we implement the raymarching algorithm in JAX:
+
+```python
+```
 
 ### Differentiable Raymarching
 
@@ -37,7 +62,7 @@ Most deep learning research uses backward mode, because you typically take the g
 You can read more about the difference and how it's implemented in JAX [here](https://jax.readthedocs.io/en/latest/notebooks/autodiff_cookbook.html).
 
 One of the nice things about JAX is that you can define a custom VJP function, and JAX will automagickally transpose it into the corresponding JVP function, if the gradient is taken in backward mode.
-<!-- For me, this was really usefull because I found the mathematical derivation a lot easier in forward mode. -->
+For me, this was really usefull because I found the mathematical derivation easier in forward mode.
 
 We start with the implicit equation we derived above
 
