@@ -13,7 +13,7 @@ tags:
 ---
 
 <a href="https://github.com/pderoovere/sitting-posture-coach" class="btn btn-primary" style="color: white" role="button">code</a>
-<a href="https://www.sitting-posture.coach/" class="btn btn-primary" style="color: white" role="button">demo</a>
+<a href="/sitting-posture-coach/" class="btn btn-primary" style="color: white" role="button">demo</a>
 
 <iframe src="https://player.vimeo.com/video/549610959?h=af4564a9ca" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
@@ -26,4 +26,4 @@ Sitting posture coach aims to provide a solution which is easy to set up and nee
 
 A node.js app (running on Amazon LightSail) will serve web pages for inference and data collection. Collected data is stored in the cloud. Images are stored as objects (in an Amazon S3 bucket), the corresponding metadata is stored in a database (PostgreSQL). This data is used to train a classification model. The trained model is converted to run in the browser (TFJS) and made available by the node.js app.
 
-You can try out the app right now at [sitting-posture.coach](https://www.sitting-posture.coach/) or view the code and a more detailed technical explanation on [github](https://github.com/pderoovere/sitting-posture-coach)!
+You can [try out the app right now](/sitting-posture-coach/) or view the code and a more detailed technical explanation on [github](https://github.com/pderoovere/sitting-posture-coach)!
