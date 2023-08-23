@@ -9,4 +9,4 @@ I started a PhD in collaboration with Octinion in 2019, partly funded by VLAIO (
 Since March 2021 I am no longer working at Octinion and continuing my PhD in a more fundamental research direction.
 My research is on the intersection of visual perception, dynamical systems and control.
 
-On this blog I write about my research as well as side projects. I live in the beautiful city of [Bruges](https://en.wikipedia.org/wiki/Bruges) with my wonderful [wife](https://berdiekesoete.be) and two kids.
+On this blog I write about my research as well as side projects. I live in the beautiful city of [Bruges](https://en.wikipedia.org/wiki/Bruges) with my wonderful [wife](https://berdiekesoete.be) and three kids.
