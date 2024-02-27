@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Implicit function theorem and JAX"
+title:      "The implicit function theorem and JAX"
 subtitle:   "Application of a differentiable ray tracer with signed distance fields"
 date:       2021-07-22 12:00:00
 author:     "Rembert Daems"
@@ -62,7 +62,7 @@ To make the raymarching algorithm differentiable, we define a custom jacobian ve
 Most deep learning research uses backward mode, because you typically take the gradient of a scalar loss with respect to lots of input parameters. Forward mode is more suited if you have only a few inputs and lots of outputs.
 You can read more about the difference and how it's implemented in JAX [here](https://jax.readthedocs.io/en/latest/notebooks/autodiff_cookbook.html).
 
-One of the nice things about JAX is that you can define a custom VJP function, and JAX will automagickally transpose it into the corresponding JVP function, if the gradient is taken in backward mode.
+One of the nice things about JAX is that you can define a custom VJP function, and JAX will automagically transpose it into the corresponding JVP function, if the gradient is taken in backward mode.
 For me, this was really usefull because I found the mathematical derivation easier in forward mode.
 
 We start with the implicit equation we derived above
