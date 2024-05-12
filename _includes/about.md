@@ -5,7 +5,7 @@ There I had the chance to learn a lot about computer vision, and apply deep lear
 
 In 2018 I switched to Octinion, a smaller R&D company, where I worked on many deep learning projects in the agricultural sector.
 In my role as AI lead I introduced deep learning in the company and coached colleagues on a technical level.
-I started a PhD in collaboration with Octinion in 2019, partly funded by VLAIO ([Baekeland mandate](https://youtu.be/O5IsAt2m45I)).
+I started a PhD in collaboration with Octinion in 2019, partly funded by VLAIO (Baekeland mandate).
 
 In 2020 I co-founded [Hippo Dx](https://hippo-dx.com), a medical device start-up.
 We developed the automated skin prick test device (SPAT),
