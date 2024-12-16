@@ -1,8 +1,9 @@
 ---
 layout: page
-title: "About"
+title: "CV"
 description: ""
 header-img: "img/waterlillies.jpg"
+hide-in-nav: true
 ---
 
 <div class="en post-container">

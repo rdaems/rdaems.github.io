@@ -1,5 +1,3 @@
-### Currently completing my PhD and seeking research opportunities in industry, open to relocation
-
 After graduating from [Ghent University](https://www.ugent.be/en) in 2016 with a master's degree in electromechanical engineering I started working at [CNH Industrial](https://www.cnhindustrial.com/), in the [combine harvester](https://youtu.be/Y5I04EObZNo) innovation team.
 There I had the chance to learn a lot about computer vision, and apply deep learning to automate combine harvesters.
 
