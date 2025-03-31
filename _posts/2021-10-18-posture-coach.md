@@ -9,7 +9,7 @@ header-mask: 0.3
 catalog:    true
 mathjax:    False
 tags:
-    - side project
+    - side-project
 ---
 
 <a href="https://github.com/pderoovere/sitting-posture-coach" class="btn btn-primary" style="color: white" role="button">code</a>
