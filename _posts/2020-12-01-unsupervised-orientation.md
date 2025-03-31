@@ -27,4 +27,4 @@ Furthermore, orientation is disentangled in latent space from other descriptive 
 We apply this method on two real-world datasets: aerial images of planes in the DOTA dataset and images of densely packed honeybees.
 We empirically show this method can learn orientation using no annotations with high accuracy compared to the same models trained with annotations.
 
-<image width="60%" src="/img/unsupervised-orientation/planes.gif" />
+{% include figure.liquid loading="eager" path="assets/img/unsupervised-orientation/planes.gif" class="img-fluid rounded z-depth-1" width="30%" %}
