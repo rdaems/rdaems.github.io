@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-variational-inference-for-sdes-driven-by-fractional-noise",
+        },{id: "post-learning-from-video-in-continuous-time-using-physics-priors-and-fractional-noise",
+      
+        title: "Learning from Video in Continuous Time Using Physics Priors and Fractional Noise",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/phd/";
+        
+      },
+    },{id: "post-variational-inference-for-sdes-driven-by-fractional-noise",
       
         title: "Variational Inference for SDEs Driven by Fractional Noise",
       
