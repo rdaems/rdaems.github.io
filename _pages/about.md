@@ -22,7 +22,7 @@ I started (still ongoing) international collaborations with [Tolga Birdal](https
 During my PhD I co-founded [Hippo Dx](https://www.hippo-dx.com), a medical device start-up.
 We developed the automated skin prick test device (SPAT),
 enabling consistent and precise allergen testing and freeing precious medical professionals time.
-I mainly worked on the camera and custom lighting system, image processing and the [AI-assisted diagnostics](https://arxiv.org/abs/2506.05862).
+I mainly worked on the camera and custom lighting system, image processing and [AI-assisted diagnostics](https://arxiv.org/abs/2506.05862).
 
 Before starting my PhD, I worked in industry for a few years.
 After graduating from Ghent University in 2016 with a master's degree in electromechanical engineering I started working at [CNH Industrial](https://www.cnhindustrial.com/), in the [combine harvester](https://youtu.be/Y5I04EObZNo) innovation team.
